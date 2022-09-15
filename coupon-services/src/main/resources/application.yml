@@ -1,0 +1,28 @@
+server:
+  port: 7070
+spring:
+  datasource:
+    password: Temp1234
+    url: jdbc:mysql://localhost:3306/myproject
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+  application:
+   name: coupon-service
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: false
+    
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+      
+      
+  instance:
+    hostname: localhost
+    instance-id: localhost
